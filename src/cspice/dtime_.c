@@ -76,7 +76,7 @@
 
 #include "time.h"
 
-#ifdef MSDOS
+#ifdef WIN32
 #define USE_CLOCK
 #endif
 

@@ -197,13 +197,20 @@
 #ifndef F2C_INCLUDE
 #define F2C_INCLUDE
 
+#ifdef WIN32 
+#define MSDOS
+#endif
+
 typedef int integer;
 typedef unsigned uinteger;
 typedef char *address;
 typedef short int shortint;
 typedef float real;
 typedef double doublereal;
+#ifndef _COMPLEX_DEFINED
+#define _COMPLEX_DEFINED
 typedef struct { real r, i; } complex;
+#endif
 typedef struct { doublereal r, i; } doublecomplex;
 typedef int logical;
 typedef short int shortlogical;
